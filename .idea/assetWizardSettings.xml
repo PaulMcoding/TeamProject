@@ -323,7 +323,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/notification_important/baseline_notification_important_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/keyboard_backspace/baseline_keyboard_backspace_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -333,8 +333,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="03a9f4" />
-                            <entry key="outputName" value="notif_icon" />
+                            <entry key="color" value="08080f" />
+                            <entry key="outputName" value="back_arrow" />
                             <entry key="sourceFile" value="C:\Users\mabum\TeamProject" />
                           </map>
                         </option>

@@ -28,12 +28,8 @@ public class MainActivity extends AppCompatActivity{
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.navAlarmlist) {
                 replaceFragment(new Alarm_Fragment());
-            } else if (item.getItemId() == R.id.navStopwatch) {
-                replaceFragment(new Stopwatch_Fragment());
-            } else if (item.getItemId() == R.id.navTimer) {
-                replaceFragment(new Timer_Fragment());
             } else if (item.getItemId() == R.id.navSetting) {
-                replaceFragment(new Setting_Fragment());
+                replaceFragment(new SettingsFragment());
             }
             return true;
         });
