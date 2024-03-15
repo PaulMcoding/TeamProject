@@ -1,0 +1,15 @@
+<!-- res/layout/splash_screen.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/clock_logo"
+        android:contentDescription="TODO" /> <!-- Adjust the scaleType as needed -->
+
+</RelativeLayout>
