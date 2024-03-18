@@ -1,6 +1,5 @@
 package com.example.talkingclock;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.widget.AnalogClock;
 import android.widget.DigitalClock;
@@ -21,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Alarm_Fragment extends Fragment implements TextToSpeech.OnInitListener {
+public class home_screen extends Fragment implements TextToSpeech.OnInitListener {
 
     private TextToSpeech textToSpeech;
 
@@ -29,7 +27,7 @@ public class Alarm_Fragment extends Fragment implements TextToSpeech.OnInitListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_alarm, container, false);
+        View view = inflater.inflate(R.layout.home_screen, container, false);
 
         // Initialize TextToSpeech
         textToSpeech = new TextToSpeech(getActivity(), this);

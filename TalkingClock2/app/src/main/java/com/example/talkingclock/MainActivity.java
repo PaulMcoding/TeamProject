@@ -5,13 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-
-
 
 import com.example.talkingclock.databinding.ActivityMainBinding;
 
@@ -23,11 +19,11 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new Alarm_Fragment());
+        replaceFragment(new home_screen());
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.navAlarmlist) {
-                replaceFragment(new Alarm_Fragment());
+                replaceFragment(new home_screen());
             } else if (item.getItemId() == R.id.navSetting) {
                 replaceFragment(new SettingsFragment());
             }
