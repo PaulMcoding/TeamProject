@@ -24,7 +24,6 @@ public class Add_Alarm extends AppCompatActivity {
 
     private ActivityAddAlarmBinding binding;
     private MaterialTimePicker picker;// used in Showtime picker method
-
     private Calendar calendar; // used in Showtime picker method
     private AlarmManager alarmManager; // used in setAlarm Method
     private PendingIntent pendingIntent; // used in Set Alarm method
@@ -41,7 +40,7 @@ public class Add_Alarm extends AppCompatActivity {
         binding.selectTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showTimePicker(); //method to pick th etime
+                showTimePicker(); //method to pick the time
             }
         });
 

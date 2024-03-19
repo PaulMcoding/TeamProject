@@ -11,14 +11,19 @@ import android.view.View;
 
 import com.example.talkingclock.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity{
-    ActivityMainBinding binding;
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    private TextToSpeechUtil ttsUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Initialize TextToSpeechUtil
+        ttsUtil = new TextToSpeechUtil(this);
+
         replaceFragment(new home_screen());
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -40,10 +45,21 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Shutdown TextToSpeechUtil to release resources
+        ttsUtil.shutdown();
+    }
+
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
+    }
+
+    public TextToSpeechUtil getTtsUtil() {
+        return ttsUtil;
     }
 }
