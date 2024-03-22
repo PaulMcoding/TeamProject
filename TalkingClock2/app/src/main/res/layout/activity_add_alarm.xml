@@ -9,19 +9,18 @@
         tools:context=".Add_Alarm">
 
 
-
-
         <EditText
             android:id="@+id/selectedTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="108dp"
             android:inputType="time"
             android:text="08 : 45 PM"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="46dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
