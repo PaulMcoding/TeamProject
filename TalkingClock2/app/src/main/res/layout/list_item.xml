@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="MissingDefaultResource">
+
+
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Name" />
+
+
+    <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        tools:text="Contact Number" />
+
+    <TextView
+        android:id="@+id/textTypeofContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:layout_marginTop="2.5dp"
+        android:layout_toRightOf="@+id/textNumber"
+        android:textColor="#1A237E"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:text="Type of Contact" />
+
+
+</RelativeLayout>

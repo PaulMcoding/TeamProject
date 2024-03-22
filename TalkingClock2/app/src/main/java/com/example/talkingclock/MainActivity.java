@@ -24,13 +24,15 @@ public class MainActivity extends AppCompatActivity {
         // Initialize TextToSpeechUtil
         ttsUtil = new TextToSpeechUtil(this);
 
-        replaceFragment(new home_screen());
+        replaceFragment(new home_screen_fragment());
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.navAlarmlist) {
-                replaceFragment(new home_screen());
+            if (item.getItemId() == R.id.navHomePage) {
+                replaceFragment(new home_screen_fragment());
             } else if (item.getItemId() == R.id.navSetting) {
                 replaceFragment(new SettingsFragment());
+            } else if (item.getItemId() == R.id.navAlarmList) {
+                replaceFragment(new Alarm_list_fragment());
             }
             return true;
         });

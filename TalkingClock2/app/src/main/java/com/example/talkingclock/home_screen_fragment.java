@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class home_screen extends Fragment implements TextToSpeech.OnInitListener {
+public class home_screen_fragment extends Fragment implements TextToSpeech.OnInitListener {
 
     private TextToSpeechUtil ttsUtil; // Updated to use TextToSpeechUtil
 

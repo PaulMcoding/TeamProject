@@ -19,7 +19,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         // Intent to open activity when notification is clicked
         Intent i = new Intent(context, NotificationActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         // Putting Notification Here
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "TalkingClock1.0") // this channel id should remain same as in Add_alarm.java
