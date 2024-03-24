@@ -4,39 +4,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:ignore="MissingDefaultResource">
+    >
 
 
 
     <TextView
-        android:id="@+id/textName"
+        android:id="@+id/textalarmtimeview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:textColor="#212121"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:text="Name" />
+        tools:text="Alarm Time" />
 
 
     <TextView
-        android:id="@+id/textNumber"
+        android:id="@+id/textalarmnotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textName"
+        android:layout_below="@+id/textalarmtimeview"
         android:layout_marginTop="2dp"
         android:layout_marginRight="5dp"
         android:textSize="16sp"
         android:textStyle="italic"
-        tools:text="Contact Number" />
+        tools:text="Alarm Notes" />
 
     <TextView
         android:id="@+id/textTypeofContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textName"
+        android:layout_below="@+id/textalarmtimeview"
         android:layout_marginTop="2.5dp"
-        android:layout_toRightOf="@+id/textNumber"
+        android:layout_toRightOf="@+id/textalarmnotes"
         android:textColor="#1A237E"
         android:textSize="14sp"
         android:textStyle="italic"

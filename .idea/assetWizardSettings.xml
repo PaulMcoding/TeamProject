@@ -323,7 +323,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/keyboard_backspace/baseline_keyboard_backspace_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/done/baseline_done_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -334,7 +334,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="08080f" />
-                            <entry key="outputName" value="back_arrow" />
+                            <entry key="outputName" value="baseline_done_24" />
                             <entry key="sourceFile" value="C:\Users\mabum\TeamProject" />
                           </map>
                         </option>

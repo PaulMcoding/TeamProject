@@ -11,45 +11,43 @@
 
         <EditText
             android:id="@+id/selectedTime"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="108dp"
             android:inputType="time"
             android:text="08 : 45 PM"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="46dp"
+            android:textSize="46sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <DigitalClock
+            android:id="@+id/selectTime2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="122dp"
             android:layout_marginTop="39dp"
             android:layout_marginEnd="123dp"
-            android:textSize="46dp"
-            android:id="@+id/selectTime2"
+            android:textSize="46sp"
             app:layout_constraintBottom_toTopOf="@+id/selectedTime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </DigitalClock>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/selectTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="158dp"
-            android:layout_marginTop="54dp"
+            android:layout_marginTop="66dp"
             android:layout_marginEnd="162dp"
-            android:text="Select Time"
+            android:text="Selected Time"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.416"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/selectedTime" />
+            app:layout_constraintTop_toTopOf="@+id/notesEditText" />
 
         <Button
             android:id="@+id/setAlarm"
@@ -70,10 +68,25 @@
             android:layout_marginStart="158dp"
             android:layout_marginTop="54dp"
             android:layout_marginEnd="162dp"
-            android:text="Camncel Alarm"
+            android:text="Cancel Alarm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/setAlarm" />
+
+        <EditText
+            android:id="@+id/notesEditText"
+            android:layout_width="250dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="101dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Notes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectedTime" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
