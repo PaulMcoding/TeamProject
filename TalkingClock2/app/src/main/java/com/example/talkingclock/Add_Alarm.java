@@ -186,6 +186,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
@@ -361,7 +362,7 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
 
     */
 
-    //worrking on menu options
+    //working on menu options
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -468,6 +469,8 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
             if (newUri == null) {
                 Toast.makeText(this, "Error with Saving", Toast.LENGTH_SHORT).show();
             } else {
+                long newRowId = ContentUris.parseId(newUri); // Get the row ID of the newly inserted row
+                Log.d("SaveContact", "New row ID: " + newRowId);
                 Toast.makeText(this, "Success with Saving", Toast.LENGTH_SHORT).show();
 
             }
@@ -487,9 +490,6 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
         hasAllRequiredValues = true;
 
         return hasAllRequiredValues;
-
-
-
 
     }
 
