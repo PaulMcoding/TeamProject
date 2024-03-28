@@ -1,12 +1,15 @@
 package com.example.talkingclock;
 
+import android.content.ContentUris;
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+
+import com.example.talkingclock.AlarmEntity;
 
 public class Alarm_list_fragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
     private ListView alarmListView;
@@ -33,6 +38,20 @@ public class Alarm_list_fragment extends Fragment implements LoaderManager.Loade
         // Initialize the adapter for the alarm list view
         alarmAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1);
         alarmListView.setAdapter(alarmAdapter);
+        // Set click listener for items in the ListView
+        alarmListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the URI of the clicked alarm entry
+                Uri alarmUri = ContentUris.withAppendedId(AlarmEntity.AlarmEntry.CONTENT_URI, id + 1);
+
+                // Start the new activity with intent
+                Intent intent = new Intent(requireContext(), Add_Alarm.class);
+                // Pass the URI of the clicked alarm entry to the new activity using intent extras
+                intent.setData(alarmUri);
+                startActivity(intent);
+            }
+        });
         // Initialize the loader to load data from the database
         LoaderManager.getInstance(this).initLoader(0, null, this);
     }

@@ -258,6 +258,20 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
         //mPhoto = findViewById(R.id.profile_image);
         //mSpinner = findViewById(R.id.spinner);
 
+
+        if (mCurrentContactUri == null) {
+            //mPhoto.setImageResource(R.drawable.photo);
+            //setTitle("Add a Tenant");
+            // hide delete menu when we are adding a new contact
+            invalidateOptionsMenu();
+
+        } else {
+            //setTitle("Edit a Tenant");
+            getLoaderManager().initLoader(LOADER, null, this);
+
+        }
+
+
         mTimeEditText.setOnTouchListener(mOnTouchListener);
         mNotesEditText.setOnTouchListener(mOnTouchListener);
         //mAlarmRepeatEditText.setOnTouchListener(mOnTouchListener);
@@ -536,8 +550,8 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
             //String typeof = cursor.getString(type);
             //mPhotoUri = Uri.parse(contactpicture);
 
-            mNotesEditText.setText(alarmtime);
-            mTimeEditText.setText(alarmnotes);
+            mNotesEditText.setText(alarmnotes);
+            mTimeEditText.setText(alarmtime);
             /*mAlarmRepeatEditText.setText(contactemail);
             mSomething1EditText.setText(contactpassport); // change dmade here
             mPhoto.setImageURI(mPhotoUri);
@@ -644,6 +658,15 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
 
     @Override
     public void onBackPressed() {
+        // If the current fragment is not Alarm_list_fragment, navigate back to it
+        if (!(getSupportFragmentManager().findFragmentById(R.id.navAlarmList) instanceof Alarm_list_fragment)) {
+            // Replace the current fragment with Alarm_list_fragment
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.navAlarmList, new Alarm_list_fragment())
+                    .commit();
+            return;
+        }
+
         // If the product hasn't changed, continue with handling back button press
         if (!mAlarmHasChanged) {
             super.onBackPressed();
@@ -662,5 +685,5 @@ public class Add_Alarm extends AppCompatActivity implements LoaderManager.Loader
         // Show dialog that there are unsaved changes
         showUnsavedChangesDialog(discardButtonClickListener);
     }
-}
 
+}
